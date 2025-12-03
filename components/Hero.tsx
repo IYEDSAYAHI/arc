@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -7,61 +7,67 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://picsum.photos/1920/1080?random=1"
-          alt="Chantier de construction"
+          src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg"
+          alt="Projet d'ingénierie en construction"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-900/95 via-brand-800/85 to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-white">
-        <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-400/30 backdrop-blur-sm mb-6">
-            <span className="flex h-2 w-2 rounded-full bg-brand-400 animate-pulse"></span>
-            <span className="text-xs md:text-sm font-medium text-brand-100 uppercase tracking-wide">
-              Leader en Île-de-France
+        <div className="max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-500/20 border border-accent-400/40 backdrop-blur-sm mb-6">
+            <span className="flex h-2 w-2 rounded-full bg-accent-400 animate-pulse"></span>
+            <span className="text-sm font-semibold text-accent-100 uppercase tracking-wider">
+              Excellence Technique en Tunisie
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6">
-            L'Expertise <span className="text-brand-400">Génie Civil</span> <br />
-            au Service de Vos Projets
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-6">
+            Maîtrise Complète de vos Projets<br />
+            <span className="text-accent-400">Étude • Pilotage • Exécution</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed max-w-2xl">
-            De la conception à la réalisation, nous bâtissons l'avenir avec précision, durabilité et innovation. Votre partenaire de confiance pour tous travaux de bâtiment et travaux publics.
+          <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
+            De la conception technique à la livraison clés en main, Arc Ingénierie & Infrastructure assure l'excellence à chaque étape. Spécialistes du gros œuvre et second œuvre, nous transformons vos ambitions en réalités solides.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-900/20"
+              href="https://wa.me/21612345678"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-accent-600 hover:bg-accent-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-accent-900/30"
             >
-              Démarrer un Projet
-              <ArrowRight size={20} />
+              <MessageCircle size={22} />
+              Contactez-nous sur WhatsApp
             </a>
             <a
               href="#services"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg backdrop-blur-sm transition-all"
             >
-              Nos Services
+              Découvrir nos Services
+              <ArrowRight size={20} />
             </a>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/20">
             {[
-              "Certifié Qualibat",
-              "Garantie Décennale",
-              "Devis sous 48h"
+              "Projets Publics & Privés",
+              "Équipe Qualifiée",
+              "Éthique Professionnelle"
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3">
-                <CheckCircle2 className="text-brand-400 shrink-0" size={20} />
-                <span className="font-medium text-gray-100">{item}</span>
+                <CheckCircle2 className="text-accent-400 shrink-0" size={22} />
+                <span className="font-semibold text-white">{item}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Geometric Arc Shape */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 };

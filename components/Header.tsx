@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, HardHat } from 'lucide-react';
+import { Menu, X, Compass } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,6 +17,8 @@ export const Header: React.FC = () => {
   const navLinks = [
     { name: 'Accueil', href: '#accueil' },
     { name: 'Services', href: '#services' },
+    { name: 'Méthodologie', href: '#methodologie' },
+    { name: 'Réalisations', href: '#realisations' },
     { name: 'À Propos', href: '#apropos' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -29,13 +31,13 @@ export const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="bg-brand-600 text-white p-2 rounded-lg group-hover:bg-brand-700 transition-colors">
-            <HardHat size={24} />
+        <a href="#" className="flex items-center gap-3 group">
+          <div className="bg-brand-600 text-white p-2.5 rounded-lg group-hover:bg-brand-700 transition-colors shadow-md">
+            <Compass size={28} strokeWidth={2.5} />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-xl leading-none text-gray-900">Génie Civil</span>
-            <span className="text-sm font-medium text-brand-600 tracking-wider">BÂTIMENT</span>
+            <span className="font-bold text-xl leading-none text-brand-900">Arc Ingénierie</span>
+            <span className="text-xs font-semibold text-accent-600 tracking-widest uppercase">& Infrastructure</span>
           </div>
         </a>
 
@@ -52,9 +54,9 @@ export const Header: React.FC = () => {
           ))}
           <a
             href="#contact"
-            className="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-md font-medium transition-all transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+            className="bg-accent-600 hover:bg-accent-700 text-white px-5 py-2.5 rounded-md font-medium transition-all transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
           >
-            Devis Gratuit
+            Demander un Devis
           </a>
         </nav>
 
@@ -84,7 +86,7 @@ export const Header: React.FC = () => {
             ))}
             <a
               href="#contact"
-              className="mt-2 bg-brand-600 text-white text-center p-3 rounded-md font-medium hover:bg-brand-700 transition-colors"
+              className="mt-2 bg-accent-600 text-white text-center p-3 rounded-md font-medium hover:bg-accent-700 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Demander un Devis

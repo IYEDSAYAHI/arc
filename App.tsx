@@ -2,7 +2,10 @@ import React from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
+import { Methodology } from './components/Methodology';
+import { Projects } from './components/Projects';
 import { About } from './components/About';
+import { Clients } from './components/Clients';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -13,7 +16,10 @@ export default function App() {
       <main className="flex-grow">
         <Hero />
         <Services />
+        <Methodology />
+        <Projects />
         <About />
+        <Clients />
         <Contact />
       </main>
       <Footer />
